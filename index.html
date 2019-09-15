@@ -42,14 +42,30 @@
 </header>
 <main>
 
-  <h1>Магазин гаджетов «Device»</h1>
+  <h1 class="visually-hidden">Магазин гаджетов «Device»</h1>
 
   <section>
-    <h2>Промо-слайдер</h2>
+    <h2 class="visually-hidden">Промо-слайдер</h2>
+    <form action="#">
+      <ul>
+        <li>
+          <input type="radio" id="promo-slider-radio-1" name="promo-slider" value="1" checked>
+          <label for="promo-slider-radio-1" class="visually-hidden">Слайд 1</label>
+        </li>
+        <li>
+          <input type="radio" id="promo-slider-radio-2" name="promo-slider" value="2">
+          <label for="promo-slider-radio-2" class="visually-hidden">Слайд 2</label>
+        </li>
+        <li>
+          <input type="radio" id="promo-slider-radio-3" name="promo-slider" value="3">
+          <label for="promo-slider-radio-3" class="visually-hidden">Слайд 3</label>
+        </li>
+      </ul>
+    </form>
     <ul>
       <li>
-        <h3>Самая длинная палка для селфи</h3>
-        <img src="img/slider-1.png" alt="">
+        <h3 class="visually-hidden">Самая длинная палка для селфи</h3>
+        <img src="img/slider-1.png" alt="Самая длинная палка для селфи">
         <p>
           Делай селфи,<br>
           как Бен Стиллер!
@@ -73,8 +89,8 @@
         </table>
       </li>
       <li hidden>
-        <h3>Мотивирующие фитнес-браслеты</h3>
-        <img src="img/slider-2.png" alt="">
+        <h3 class="visually-hidden">Мотивирующие фитнес-браслеты</h3>
+        <img src="img/slider-2.png" alt="Мотивирующие фитнес-браслеты">
         <p>
           Худеем<br>
           правильно!
@@ -94,8 +110,8 @@
         </table>
       </li>
       <li hidden>
-        <h3>Квадрокоптер с лазером</h3>
-        <img src="img/slider-3.png" alt="">
+        <h3 class="visually-hidden">Квадрокоптер с лазером</h3>
+        <img src="img/slider-3.png" alt="Квадрокоптер с лазером">
         <p>
           Порхает как бабочка,
           жалит как пчела!
@@ -120,7 +136,7 @@
   </section>
 
   <section>
-    <h2>Популярные разделы каталога товаров</h2>
+    <h2 class="visually-hidden">Популярные разделы каталога товаров</h2>
     <ul>
       <li>
         <a href="#">
@@ -174,7 +190,12 @@
   </section>
 
   <section>
-    <h2>Сервисы</h2>
+    <h2 class="visually-hidden">Сервисы</h2>
+    <ul>
+      <li><a>Доставка</a></li>
+      <li><a href="#">Гарантия</a></li>
+      <li><a href="#">Кредит</a></li>
+    </ul>
     <ul>
       <li>
         <h3>Доставка</h3>
@@ -195,7 +216,7 @@
   </section>
 
   <section>
-    <h2>Логотипы производителей товаров</h2>
+    <h2 class="visually-hidden">Логотипы производителей товаров</h2>
     <ul>
       <li><a href="#"><img src="img/logo-1.png" width="260" height="100" alt="Логотип DJI"></a></li>
       <li><a href="#"><img src="img/logo-2.png" width="260" height="100" alt="Логотип SP Gadgets"></a></li>

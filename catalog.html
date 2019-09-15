@@ -43,7 +43,7 @@
 </header>
 <main>
 
-  <h1>Моноподы для селфи</h1>
+  <h1 class="visually-hidden">Моноподы для селфи</h1>
 
   <ul>
     <li><a href="index.html">Главная</a></li>
@@ -56,7 +56,23 @@
     <form action="https://echo.htmlacademy.ru" method="get">
       <fieldset>
         <legend>Стоимость</legend>
-        <!-- Здесь будет ползунок выбора диапазона стоимости с двумя ручками -->
+        <div>
+          <div> <!-- Весь диапазон цен (серая линия) -->
+            <button type="button">Минимальная цена</button>
+            <div></div> <!-- Зеленый диапазон между кнопками -->
+            <button type="button">Максимальная цена</button>
+          </div>
+          <ul>
+            <li>
+              <label for="filter-min-price">от 0</label>
+              <input type="hidden" id="filter-min-price" name="min-price" value="0">
+            </li>
+            <li>
+              <label for="filter-max-price">до 5000</label>
+              <input type="hidden" id="filter-max-price" name="max-price" value="5000">
+            </li>
+          </ul>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Цвет</legend>
