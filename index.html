@@ -11,7 +11,7 @@
   </a>
   <form action="https://echo.htmlacademy.ru" method="get">
     <label for="search-field" class="visually-hidden">Поиск по сайту</label>
-    <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+    <input type="text" name="search" id="search-field" placeholder="Поиск по сайту">
     <button type="submit">Найти</button>
   </form>
   <ul>
@@ -259,19 +259,19 @@
   <form action="https://echo.htmlacademy.ru" method="post">
     <p>
       <label for="write-us-name">Ваше имя:</label>
-      <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия">
+      <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия" required>
     </p>
     <p>
       <label for="write-us-email">Ваш e-mail:</label>
-      <input type="text" name="email" id="write-us-email" placeholder="email@example.com">
+      <input type="email" name="email" id="write-us-email" placeholder="email@example.com" required>
     </p>
     <p>
       <label for="write-us-text">Текст письма:</label>
-      <textarea name="text" id="write-us-text" rows="5" placeholder="В свободной форме"></textarea>
+      <textarea name="text" id="write-us-text" rows="5" placeholder="В свободной форме" required></textarea>
     </p>
     <button type="submit">Отправить</button>
+    <button type="reset">Закрыть</button>
   </form>
-  <button type="button">Закрыть</button>
 </section>
 
 <section>
