@@ -191,11 +191,22 @@
 
   <section>
     <h2 class="visually-hidden">Сервисы</h2>
-    <ul>
-      <li><a>Доставка</a></li>
-      <li><a href="#">Гарантия</a></li>
-      <li><a href="#">Кредит</a></li>
-    </ul>
+    <form action="#">
+      <ul>
+        <li>
+          <input type="radio" id="services-slider-delivery" name="services-slider" value="delivery" checked>
+          <label for="services-slider-delivery" class="visually-hidden">Доставка</label>
+        </li>
+        <li>
+          <input type="radio" id="services-slider-guarantee" name="services-slider" value="guarantee">
+          <label for="services-slider-guarantee" class="visually-hidden">Гарантия</label>
+        </li>
+        <li>
+          <input type="radio" id="services-slider-credit" name="services-slider" value="credit">
+          <label for="services-slider-credit" class="visually-hidden">Кредит</label>
+        </li>
+      </ul>
+    </form>
     <ul>
       <li>
         <h3>Доставка</h3>
