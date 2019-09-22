@@ -4,23 +4,6 @@
   <meta charset="utf-8">
   <title>Магазин гаджетов «Device»</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
-  <style>
-    @font-face {
-      font-family: "Gilroy ExtraBold";
-      font-style: normal;
-      font-weight: 400;
-      src: url("fonts/gilroyextrabold.woff2") format("woff2"),
-      url("fonts/gilroyextrabold.woff") format("woff");
-    }
-
-    @font-face {
-      font-family: "Gilroy Light";
-      font-style: normal;
-      font-weight: 300;
-      src: url("fonts/gilroylight.woff2") format("woff2"),
-      url("fonts/gilroylight.woff") format("woff");
-    }
-  </style>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,9 +13,9 @@
     <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина гаджетов «Device»">
   </a>
   <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-    <label for="search-field" class="visually-hidden">Поиск по сайту</label>
+    <label for="search-field" class="visually-hidden">Поиск:</label>
     <input type="text" name="search" id="search-field" placeholder="Поиск по сайту">
-    <button class="search-button" type="submit"><span>Найти</span></button>
+    <button class="search-button" type="submit">Найти</button>
   </form>
   <ul class="header-actions">
     <li><a href="#">Валентин Петухов</a></li>
@@ -68,28 +51,30 @@
   <ul class="breadcrumbs">
     <li><a href="index.html">Главная</a></li>
     <li><a href="catalog.html">Каталог товаров</a></li>
-    <li>Моноподы для селфи</li>
+    <li><a>Моноподы для селфи</a></li>
   </ul>
 
-  <section>
+  <section class="filter">
     <h2>Фильтр:</h2>
-    <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+    <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset>
         <legend>Стоимость</legend>
-        <div>
-          <div> <!-- Весь диапазон цен (серая линия) -->
-            <button type="button">Минимальная цена</button>
-            <div></div> <!-- Зеленый диапазон между кнопками -->
-            <button type="button">Максимальная цена</button>
+        <div class="filter-price">
+          <div class="full-price-range"> <!-- Весь диапазон цен (серая линия) -->
+            <button type="button"><span class="visually-hidden">Минимальная</span></button>
+            <div class="selected-price-range"></div> <!-- Зеленый диапазон между кнопками -->
+            <button type="button"><span class="visually-hidden">Максимальная</span></button>
           </div>
-          <ul>
+          <ul class="filter-prices-limits">
             <li>
+              <input class="visually-hidden filter-price-input" type="text" id="filter-min-price" name="min-price"
+                     value="0">
               <label for="filter-min-price">от 0</label>
-              <input type="hidden" id="filter-min-price" name="min-price" value="0">
             </li>
             <li>
+              <input class="visually-hidden filter-price-input" type="text" id="filter-max-price" name="max-price"
+                     value="5000">
               <label for="filter-max-price">до 5000</label>
-              <input type="hidden" id="filter-max-price" name="max-price" value="5000">
             </li>
           </ul>
         </div>
@@ -136,14 +121,14 @@
     </form>
   </section>
 
-  <section>
+  <section class="sort">
     <h2>Сортировка:</h2>
-    <ul>
-      <li><a>По цене</a></li>
-      <li><a href="#">По типу</a></li>
-      <li><a href="#">По популярности</a></li>
-      <li><a>По возрастанию</a></li>
-      <li><a href="#">По убыванию</a></li>
+    <ul class="sort-list">
+      <li class="sort-item sort-type"><a>По цене</a></li>
+      <li class="sort-item sort-type"><a href="#">По типу</a></li>
+      <li class="sort-item sort-type"><a href="#">По популярности</a></li>
+      <li class="sort-item sort-up-down"><a>По возрастанию</a></li>
+      <li class="sort-item sort-up-down"><a href="#">По убыванию</a></li>
     </ul>
   </section>
 
@@ -187,12 +172,12 @@
         <p class="catalog-item-price">4 900 руб.</p>
       </li>
     </ul>
-    <ul>
-      <li><a>Назад</a></li>
-      <li><a>1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">Вперед</a></li>
+    <ul class="pagination-list">
+      <li class="pagination-item pagination-button"><a>Назад</a></li>
+      <li class="pagination-item pagination-page"><a>1</a></li>
+      <li class="pagination-item pagination-page"><a href="#">2</a></li>
+      <li class="pagination-item pagination-page"><a href="#">3</a></li>
+      <li class="pagination-item pagination-button"><a href="#">Вперед</a></li>
     </ul>
   </section>
 </main>
@@ -218,7 +203,7 @@
     <li><a href="#">Инстаграм</a></li>
     <li><a href="#">Твиттер</a></li>
   </ul>
-  <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+  <a class="logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
     <img src="img/logo-html.svg" alt="Интенсив «Профессиональный HTML и CSS, уровень 1»">
   </a>
 </footer>
